@@ -199,7 +199,7 @@ export default function Spital() {
       <div style={{ display: "grid", gridTemplateColumns: "320px 1fr", gap: "20px" }}>
 
         {/* Lista pacienti */}
-        <div className="form-card" style={{ marginBottom: "0", padding: "16px" }}>
+        <div className="form-card" style={{ marginBottom: "0", padding: "16px", height: "fit-content" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "12px" }}>
             <h2 style={{ margin: 0, fontSize: "15px" }}>{showArhivati ? "Pacienți arhivați" : "Pacienți înregistrați"}</h2>
             <button onClick={() => { setShowArhivati(!showArhivati); setSelected(null); setSearch(""); }}
