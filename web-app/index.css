@@ -119,7 +119,7 @@ body {
 @media (max-width: 768px) {
   .vitals-grid, .charts-grid, .form-grid { grid-template-columns: 1fr; }
   .form-group.full-width { grid-column: 1; }
-  div[style*="grid-template-columns: 320px"] { display: block !important; }
+  div[style*="grid-template-columns: 320px"] { display: flex !important; flex-direction: column !important; }
   div[style*="display: flex; gap: 10px"] { flex-direction: column; }
   div[style*="display: flex; gap: 8px"]  { flex-direction: row; flex-wrap: wrap; }
   .form-card button { width: 100%; justify-content: center; }
