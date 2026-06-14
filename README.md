@@ -38,7 +38,7 @@ Sistemul este structurat pe trei niveluri:
 2. cd ambulanta-web
 3. npm install
 4. Completeaza firebase.js cu propriile chei Firebase
-5. npm run dev → http://localhost
+5. npm run dev -> http://localhost
 
 # Comenzi disponibile
 - npm run dev - porneste serverul local de dezvoltare
