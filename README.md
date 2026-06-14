@@ -1,16 +1,16 @@
-#Eficientizarea Interventiilor in Medicina de Urgenta prin Tehnologie Avansata
+# Eficientizarea Interventiilor in Medicina de Urgenta prin Tehnologie Avansata
 
-#Descriere
+# Descriere
 Sistem experimental IoT end-to-end pentru monitorizarea parametrilor vitali ai pacientilor 
 in timpul transportului cu ambulanta si transmiterea datelor live catre unitatea spitaliceasca 
 
-#Arhitectura
+# Arhitectura
 Sistemul este structurat pe trei niveluri:
 1.Edge: microcontroler ESP32 cu senzori biomedicali
 2.Cloud: platforma Firebase
 3.Client: aplicatie web React cu doua module distincte
 
-#Componente hardware
+# Componente hardware
 -ESP32 DevKit V1
 -MAX30102: senzor puls si saturatie de oxigen
 -MLX90614: senzor de temperatura corporala non-contact
@@ -18,15 +18,35 @@ Sistemul este structurat pe trei niveluri:
 -Acumulatori Li-ion 18650
 -Modul powerbank
 
-#Tehnologii software
+# Tehnologii software
 -Firmware: C++ (Arduino IDE)
 -Frontend: React, Vite
 -Cloud: Firebase (Realtime Database, Firestore, Authentication, Hosting)
 
-#Functionalitati principale
+# Functionalitati principale
 -Monitorizare live BPM, SpO2 si temperatura cutanata
 -Transmisie date prin HTTP PUT la intervale de 2 secunde
 -Mecanism SessionId pentru identificarea pacientilor
 -Modul Ambulanta pentru monitorizare live si inregistrate fisa pacienti
 -Modul Spital pentru vizualizare date, management pacienti, export PDF
 -Autentificare si control acces bazat pe roluri
+
+# Instalare si rulare
+
+# Aplicatie web
+1. git clone
+2. cd ambulanta-web
+3. npm install
+4. Completeaza firebase.js cu propriile chei Firebase
+5. npm run dev → http://localhost
+
+# Comenzi disponibile
+- npm run dev - porneste serverul local de dezvoltare
+- npm run build - genereaza versiunea de productie
+- firebase deploy - publica aplicatia pe Firebase Hosting
+
+# Firmware ESP32
+1. Deschide sketch_ambulanta.ino in Arduino IDE
+2. Completeaza ssid si parola cu credentialele WiFi
+3. Instaleaza bibliotecile
+4. Selecteaza placa ESP32 DevKit V1 si upload
